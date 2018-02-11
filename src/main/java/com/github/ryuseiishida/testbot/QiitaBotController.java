@@ -38,10 +38,10 @@ public class QiitaBotController {
         replymessage = serch.getSerch(replyevent,token);
     }
 
-    mLineMessagingService.replyMessage(replymessage).execute();
+        mLineMessagingService.replyMessage(replymessage).execute();
     }
 
     public static void main(String[] args) {
-    SpringApplication.run(QiitaBotController.class, args);
+        SpringApplication.run(QiitaBotController.class, args);
     }
 }

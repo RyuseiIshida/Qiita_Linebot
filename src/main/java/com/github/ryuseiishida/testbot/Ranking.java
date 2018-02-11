@@ -25,8 +25,8 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Ranking {
-    public ReplyMessage getRanking(String replyevent, String token)throws IOException {
-    ArrayList<Message> replymessage = new ArrayList<Message>();
+    public ReplyMessage getRanking(String replyevent, String token) throws IOException {
+    ArrayList<Message> replymessage = new ArrayList<>();
     final String POPULAR_URL = "http://qiita.com/popular-items";
     String result = "";
     String tmp = "";
@@ -36,7 +36,7 @@ public class Ranking {
     Elements elements = document_popular.select(".popularItem_articleTitle_text");
     
     
-    int i = 1;//iなしだとなぜかリプライされない...
+    int i = 1;
     for(Element element : elements){
         result += "\n------------------\n\n";
         result += element.text() + "\n";
